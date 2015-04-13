@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1428940662 source:d:\gleb's files\programming\quicksort\input.c
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
+1428942821 source:d:\gleb's files\programming\bubblesort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<malloc.h>
+
