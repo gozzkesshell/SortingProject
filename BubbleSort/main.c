@@ -28,13 +28,13 @@ int main () {
         }
     //int n = sizeof a / sizeof a[0];
     for (i = 0; i < n; i++)
-    {   
+    {
         printf("%d%s", a[i], i%20 == 0 ? "\n" : " ");}
 	BubbleSort(a, n);
     for (i = 0; i < n; i++)
-    {   
+    {
         printf("%d%s", a[i], i%20 == 0 ? "\n" : " ");}
-    system("Pause");
+
 	return 0;
 	}
 
