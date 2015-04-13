@@ -11,7 +11,6 @@ int main () {
     int *a;
     int n;
     int i;
-    int c=0;
     printf("Input the number of numbers\n");
     scanf("\n%d", &n);
     a=(int *)malloc(n*sizeof(int));
@@ -29,14 +28,15 @@ int main () {
         }
     //int n = sizeof a / sizeof a[0];
     for (i = 0; i < n; i++)
-    {   c+=20;
-        printf("%d%s", a[i], i == c - 1 ? "\n" : " ");}
-    (a, n);
+    {   
+        printf("%d%s", a[i], i%20 == 0 ? "\n" : " ");}
+	BubbleSort(a, n);
     for (i = 0; i < n; i++)
-    {   c+=20;
-        printf("%d%s", a[i], i == c - 1 ? "\n" : " ");}
-    return 0;
-}
+    {   
+        printf("%d%s", a[i], i%20 == 0 ? "\n" : " ");}
+    system("Pause");
+	return 0;
+	}
 
 void BubbleSort (int *a, int n) {
     int i, t, s = 1;

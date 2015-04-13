@@ -24,10 +24,10 @@ void bestInput(int *a, int n)
     for(i=0;i<n;i++)
     {
         a[i]+=i;
-        if(a[i] == 21)
-            a[i]=348;
+        
+            
     }
-
+	a[2]=348;
 }
 
 void worstInput(int *a, int n)
@@ -37,7 +37,8 @@ void worstInput(int *a, int n)
     for(i=0;i<n;i++)
     {
         a[i]=n-i;
-        if(a[i] == 21)
-            a[i]=348;
+        
+           
     }
+	 a[99]=348;
 }
