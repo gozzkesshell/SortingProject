@@ -9,7 +9,8 @@ void randInput(int *,int );
 void bestInput(int *,int );
 void worstInput(int *,int );
 
-int main () {
+int main ()
+{
     int *a;
     int n;
     int i;
