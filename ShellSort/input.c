@@ -24,9 +24,10 @@ void bestInput(int *a, int n)
     for(i=0;i<n;i++)
     {
         a[i]+=i;
-        if(a[i] == 21)
-            a[i]=348;
+
+
     }
+	a[2]=348;
 
 }
 

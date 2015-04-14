@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
+#define n 100
+#define i 1
 
 void BubbleSort (int *a, int n);
 void randInput(int *,int );
@@ -12,11 +14,11 @@ int main () {
     int n;
     int i;
     int c=0;
-    printf("Input the number of numbers\n");
-    scanf("\n%d", &n);
+ //   printf("Input the number of numbers\n");
+ //   scanf("\n%d", &n);
     a=(int *)malloc(n*sizeof(int));
-    printf("Choose how to full unsorted massive: 1 - rand,2 - best,3 - worst\n");
-    scanf("%d",&i);
+   // printf("Choose how to full unsorted massive: 1 - rand,2 - best,3 - worst\n");
+   // scanf("%d",&i);
         switch(i)
         {
             case 1: randInput(a,n);

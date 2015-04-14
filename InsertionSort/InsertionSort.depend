@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1428938002 source:c:\users\ken_66\documents\github\sortingproject\quicksort\input.c
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+

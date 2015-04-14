@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
+#define n 100
+#define i 1
 
 void ShellSort(int *, int);
 void randInput(int *,int );
@@ -11,12 +13,12 @@ int main () {
     int *a;
     int n;
     int i;
-    int c=0;
-    printf("Input the number of numbers\n");
-    scanf("\n%d", &n);
+
+   // printf("Input the number of numbers\n");
+   // scanf("\n%d", &n);
     a=(int *)malloc(n*sizeof(int));
-    printf("Choose how to full unsorted massive: 1 - rand,2 - best,3 - worst\n");
-    scanf("%d",&i);
+   // printf("Choose how to full unsorted massive: 1 - rand,2 - best,3 - worst\n");
+    //scanf("%d",&i);
         switch(i)
         {
             case 1: randInput(a,n);
@@ -27,14 +29,14 @@ int main () {
             break;
             default: exit(EXIT_FAILURE);
         }
-    //int n = sizeof a / sizeof a[0];
+
     for (i = 0; i < n; i++)
-    {   c+=20;
-        printf("%d%s", a[i], i == c - 1 ? "\n" : " ");}
+    {
+        printf("%d%s", a[i],  i%20 == 0 ? "\n" : " ");}
     ShellSort(a, n);
     for (i = 0; i < n; i++)
-    {   c+=20;
-        printf("%d%s", a[i], i == c - 1 ? "\n" : " ");}
+    {
+        printf("%d%s", a[i],  i%20 == 0 ? "\n" : " ");}
     return 0;
 }
 
