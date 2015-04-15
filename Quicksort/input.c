@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#define n 10000
 
  void randInput(int *,int );
  void bestInput(int *,int );
