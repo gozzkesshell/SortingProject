@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#define n 10000
+#define n 100
 
- void randInput(int *,int );
- void bestInput(int *,int );
- void worstInput(int *,int );
+ void randInput(int * );
+ void bestInput(int * );
+ void worstInput(int * );
 
 
 void randInput(int *a)
@@ -22,27 +22,14 @@ void bestInput(int *a)
 {
     int i;
     a[0]=0;
-    for(i=1
-
-        ;i<n;i++)
+    for(i=0;i<n;i++)
     {
-<<<<<<< HEAD
-        a[i]=i;
-=======
-        a[i]+=i;
-<<<<<<< HEAD
+        a[i]=i+1;
 
 
     }
 	a[2]=348;
 
-=======
-
-
->>>>>>> origin/master
-    }
-	a[2]=348;
->>>>>>> origin/master
 }
 
 void worstInput(int *a)
@@ -52,17 +39,8 @@ void worstInput(int *a)
     for(i=0;i<n;i++)
     {
         a[i]=n-i;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 
 
-=======
-
-
->>>>>>> origin/master
->>>>>>> origin/master
     }
 	 a[99]=348;
 }

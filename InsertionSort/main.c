@@ -2,16 +2,15 @@
 #include <stdlib.h>
 #include <malloc.h>
 #define n 100
-#define i 1
-
-void InsertionSort(int *a, int n);
-void randInput(int *,int );
-void bestInput(int *,int );
-void worstInput(int *,int );
+#define v 3
+void InsertionSort(int *a);
+void randInput(int *);
+void bestInput(int *);
+void worstInput(int *);
 
 int main () {
     int *a;
-    int n;
+
     int i;
 
  //   printf("Input the number of numbers\n");
@@ -19,13 +18,13 @@ int main () {
     a=(int *)malloc(n*sizeof(int));
    // printf("Choose how to full unsorted massive: 1 - rand,2 - best,3 - worst\n");
    // scanf("%d",&i);
-        switch(i)
+        switch(v)
         {
-            case 1: randInput(a,n);
+            case 1: randInput(a);
             break;
-            case 2: bestInput(a,n);
+            case 2: bestInput(a);
             break;
-            case 3: worstInput(a,n);
+            case 3: worstInput(a);
             break;
             default: exit(EXIT_FAILURE);
         }
@@ -33,14 +32,14 @@ int main () {
     for (i = 0; i < n; i++)
     {
         printf("%d%s", a[i], i%20 == 0 ? "\n" : " ");}
-    (a, n);
+    InsertionSort(a);
     for (i = 0; i < n; i++)
     {
         printf("%d%s", a[i], i%20 == 0 ? "\n" : " ");}
     return 0;
 }
 
-void InsertioSort(int *a, int n) {
+void InsertionSort(int *a) {
     int i, j, t;
     for (i = 1; i < n; i++) {
         t = a[i];

@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1428937487 source:d:\gleb's files\programming\quicksort\main.c
-	<stdio.h>
-	<malloc.h>
-	<stdlib.h>
-

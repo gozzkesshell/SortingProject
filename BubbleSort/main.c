@@ -1,45 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
-<<<<<<< HEAD
-#define n 10000
-=======
-#define n 100
-#define i 1
+#define n 100000
+#define v 3
 
->>>>>>> origin/master
-void BubbleSort (int *a, int n);
-void randInput(int *,int );
-void bestInput(int *,int );
-void worstInput(int *,int );
+void BubbleSort(int *a);
+void randInput(int *);
+void bestInput(int *);
+void worstInput(int *);
 
 int main () {
     int *a;
-    //int n;
+
     int i;
-<<<<<<< HEAD
-   // printf("Input the number of numbers\n");
-   //scanf("\n%d", &n);
-=======
-<<<<<<< HEAD
-    int c=0;
+
  //   printf("Input the number of numbers\n");
  //   scanf("\n%d", &n);
-=======
-    printf("Input the number of numbers\n");
-    scanf("\n%d", &n);
->>>>>>> origin/master
->>>>>>> origin/master
     a=(int *)malloc(n*sizeof(int));
    // printf("Choose how to full unsorted massive: 1 - rand,2 - best,3 - worst\n");
    // scanf("%d",&i);
-        switch(i)
+        switch(v)
         {
-            case 1: randInput(a,n);
+            case 1: randInput(a);
             break;
-            case 2: bestInput(a,n);
+            case 2: bestInput(a);
             break;
-            case 3: worstInput(a,n);
+            case 3: worstInput(a);
             break;
             default: exit(EXIT_FAILURE);
         }
@@ -47,15 +33,15 @@ int main () {
     for (i = 0; i < n; i++)
     {
         printf("%d%s", a[i], i%20 == 0 ? "\n" : " ");}
-	BubbleSort(a, n);
+    BubbleSort(a);
     for (i = 0; i < n; i++)
     {
         printf("%d%s", a[i], i%20 == 0 ? "\n" : " ");}
+    return 0;
+}
 
-	return 0;
-	}
 
-void BubbleSort (int *a, int n) {
+void BubbleSort (int *a) {
     int i, t, s = 1;
     while (s) {
         s = 0;
