@@ -8,7 +8,7 @@
  void worstInput(int *,int );
 
 
-void randInput(int *a, int n)
+void randInput(int *a)
 {
     int i;
     srand(time(NULL));
@@ -18,7 +18,7 @@ void randInput(int *a, int n)
     }
 }
 
-void bestInput(int *a, int n)
+void bestInput(int *a)
 {
     int i;
     a[0]=0;
@@ -26,19 +26,43 @@ void bestInput(int *a, int n)
 
         ;i<n;i++)
     {
+<<<<<<< HEAD
         a[i]=i;
+=======
+        a[i]+=i;
+<<<<<<< HEAD
+
+
     }
 	a[2]=348;
+
+=======
+
+
+>>>>>>> origin/master
+    }
+	a[2]=348;
+>>>>>>> origin/master
 }
 
-void worstInput(int *a, int n)
+void worstInput(int *a)
 {
     int i;
     a[0]=0;
     for(i=0;i<n;i++)
     {
         a[i]=n-i;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+
+=======
+
+
+>>>>>>> origin/master
+>>>>>>> origin/master
     }
 	 a[99]=348;
 }
