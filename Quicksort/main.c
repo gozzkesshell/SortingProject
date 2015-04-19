@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
-#define n 100
-#define v 1
+#define n 50000
+#define v 3
+
 
 void QuickSort(int *a, int );
 void randInput(int *);
 void bestInput(int *);
 void worstInput(int *);
+int q=0;// перестановки
+int s=0;// sravnenia
 
 int main () {
     int *a;
@@ -37,6 +40,7 @@ int main () {
     for (i = 0; i < n; i++)
     {
         printf("%d%s", a[i], i%20 == 0 ? "\n" : " ");}
+         printf("\nKol-vo perestanovok i sravneniy: %d, %d",q,s);
     return 0;
 }
 
@@ -47,14 +51,18 @@ void QuickSort (int *a, int N) {
         return;
     p = a[N / 2];
     for (i = 0, j = N - 1;; i++, j--) {
-        while (a[i] < p)
+        while (a[i] < p){
             i++;
-        while (p < a[j])
+            s++;}
+        while (p < a[j]){
             j--;
-        if (i >= j)
-            break;
+            s++;}
+        if (i >= j){
+            s++;
+            break;}
         t = a[i];
         a[i] = a[j];
+        q++;
         a[j] = t;
     }
     QuickSort(a, i);

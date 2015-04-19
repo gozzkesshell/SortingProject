@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
-#define n 100000
-#define v 3
+#define n 50000
+#define v 1
+
 
 void ShellSort(int *a);
 void randInput(int *);
 void bestInput(int *);
 void worstInput(int *);
+int q=0;// перестановки
+int s=0;
 
 int main () {
     int *a;
@@ -37,19 +40,27 @@ int main () {
     for (i = 0; i < n; i++)
     {
         printf("%d%s", a[i], i%20 == 0 ? "\n" : " ");}
+        printf("\nKol-vo perestanovok i sravneniy: %d, %d",q,s);
     return 0;
 }
 
 void ShellSort (int *a) {
-    int h, i, j, t;
-    for (h = n; h /= 2;) {
-        for (i = h; i < n; i++) {
+    int d, i, j, t;
+    for (d = n; d > 0;d /= 2) {// d is choosing by Shell method
+        for (i = d; i < n; i++) {
             t = a[i];
-            for (j = i; j >= h && t < a[j - h]; j -= h) {
-                a[j] = a[j - h];
+            for (j = i; j >= d; j -= d) {
+                s++;
+                if(t < a[j - d]){
+                a[j] = a[j - d];
+                q++;}
+                else break;
             }
             a[j] = t;
+
         }
     }
+
 }
+
 

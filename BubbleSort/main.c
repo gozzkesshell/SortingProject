@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include <malloc.h>
 #define n 100000
-#define v 3
+#define v 1
 
 void BubbleSort(int *a);
 void randInput(int *);
 void bestInput(int *);
 void worstInput(int *);
+long long int q=0;// перестановки
+long long int s=0;// sravnenia
 
 int main () {
     int *a;
@@ -37,20 +39,23 @@ int main () {
     for (i = 0; i < n; i++)
     {
         printf("%d%s", a[i], i%20 == 0 ? "\n" : " ");}
+         printf("\nKol-vo perestanovok i sravneniy: %d, %d",q,s);
     return 0;
 }
 
 
 void BubbleSort (int *a) {
-    int i, t, s = 1;
-    while (s) {
-        s = 0;
+    int i, t, k = 1;
+    while (k) {
+        k = 0;
         for (i = 1; i < n; i++) {
             if (a[i] < a[i - 1]) {
+                s++;
                 t = a[i];
                 a[i] = a[i - 1];
+                q++;
                 a[i - 1] = t;
-                s = 1;
+                k = 1;
             }
         }
     }
