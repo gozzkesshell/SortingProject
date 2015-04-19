@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
-#define n 100
-#define v 1
+#define n 100000
+#define v 3
 
 void ShellSort(int *a);
 void randInput(int *);

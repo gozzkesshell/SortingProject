@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
-#define n 100
+#define n 100000
 #define v 3
 void InsertionSort(int *a);
 void randInput(int *);
